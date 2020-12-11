@@ -14,13 +14,13 @@ protocol ViewToPresenterProtocol: class{
     var view: PresenterToViewProtocol? {get set}
     var interactor: PresenterToInteractorProtocol? {get set}
     var router: PresenterToRouterProtocol? {get set}
-    func startFetchingPhotos()
+    func startFetchingPhotos(pageNumber: Int)
     func showImageController(navigationController:UINavigationController,image:UIImage)
 
 }
 
 protocol PresenterToViewProtocol: class{
-    func showImages(imagesArray:Array<HomeImagesDataModel>)
+    func showImages(imageModel: HomeImagePhotos)
     func showError()
 }
 
@@ -31,10 +31,10 @@ protocol PresenterToRouterProtocol: class {
 
 protocol PresenterToInteractorProtocol: class {
     var presenter:InteractorToPresenterProtocol? {get set}
-    func fetchPhotos()
+    func fetchPhotos(pageNumber: Int)
 }
 
 protocol InteractorToPresenterProtocol: class {
-    func imageFetchedSuccess(imagesModelArray:Array<HomeImagesDataModel>)
+    func imageFetchedSuccess(imageModel: HomeImagePhotos)
     func imageFetchFailed()
 }

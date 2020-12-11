@@ -7,6 +7,28 @@
 //
 
 import Foundation
+class HomeImagePhotos : NSObject {
+    var page:String = "0"
+    var pages:Int = 0
+    var perpage:String = "0"
+    var total:Int = 1
+    var arrPhotos:Array<HomeImagesDataModel> = []
+    
+    override init() {
+        super.init()
+    }
+    
+    init(dictData : Dictionary<String,Any>) {
+        print(dictData)
+        page         = dictData["page"] as? String ?? "0"
+        pages        = dictData["pages"] as? Int ?? 0
+        perpage      = dictData["perpage"] as? String ?? "0"
+        total        = dictData["total"] as? Int ?? 0
+        
+        let arrPhoto = dictData["photo"] as? Array<Dictionary<String,Any>> ?? []
+        arrPhotos    = arrPhoto.map({HomeImagesDataModel(dictData: $0)})
+    }
+}
 
 class HomeImagesDataModel: NSObject {
     

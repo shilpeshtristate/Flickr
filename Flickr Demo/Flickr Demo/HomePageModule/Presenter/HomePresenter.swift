@@ -17,8 +17,8 @@ class HomePresenter:ViewToPresenterProtocol {
     
     var router: PresenterToRouterProtocol?
     
-    func startFetchingPhotos() {
-        interactor?.fetchPhotos()
+    func startFetchingPhotos(pageNumber: Int) {
+        interactor?.fetchPhotos(pageNumber: pageNumber)
     }
     
     func showImageController(navigationController: UINavigationController,image: UIImage) {
@@ -29,8 +29,8 @@ class HomePresenter:ViewToPresenterProtocol {
 
 extension HomePresenter: InteractorToPresenterProtocol{
     
-    func imageFetchedSuccess(imagesModelArray: Array<HomeImagesDataModel>) {
-        view?.showImages(imagesArray: imagesModelArray)
+    func imageFetchedSuccess(imageModel: HomeImagePhotos) {
+        view?.showImages(imageModel: imageModel)
     }
     
     func imageFetchFailed() {

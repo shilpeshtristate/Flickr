@@ -11,14 +11,20 @@ import Foundation
 class HomeInteractor: PresenterToInteractorProtocol{
     var presenter: InteractorToPresenterProtocol?
     
-    func fetchPhotos() {
+    func fetchPhotos(pageNumber: Int) {
         
         let method = "flickr.galleries.getPhotos"
         let api_key = "d14c14722aecbb1783190a9ba52efa90"
-        let gallery_id = "66911286-72157647277042064"
+        let gallery_id = "9634-72157621980433950"//"66911286-72157647277042064"
+        let page     = "\(pageNumber)"
+        let per_page = "11"
         
         
-        var request = URLRequest(url: URL(string: "https://api.flickr.com/services/rest/?method=\(method)&api_key=\(api_key)&gallery_id=\(gallery_id)&format=json&nojsoncallback=1")!)
+        let strURL = "https://www.flickr.com/services/rest/?method=\(method)&api_key=\(api_key)&gallery_id=\(gallery_id)&per_page=\(per_page)&page=\(page)&format=json&nojsoncallback=1"
+        
+        
+
+        var request = URLRequest(url: URL(string: strURL)!)
         request.httpMethod = "GET"
         
         
@@ -28,10 +34,9 @@ class HomeInteractor: PresenterToInteractorProtocol{
                 do {
                     let dict = try JSONSerialization.jsonObject(with: data, options: []) as? Dictionary<String,Any>
                     if let dictData = dict {
-                        let dictPhotos : Dictionary<String,Any> = dictData["photos"] as? Dictionary<String,Any> ?? [:]
-                        let arrPhoto : Array<Dictionary<String,Any>> = dictPhotos["photo"] as? Array<Dictionary<String,Any>> ?? []
-                        let arrImagesModel = arrPhoto.map({HomeImagesDataModel(dictData: $0)})
-                        self.presenter?.imageFetchedSuccess(imagesModelArray: arrImagesModel)
+                        let dictPhoto = dictData["photos"] as? Dictionary<String,Any> ?? [:]
+                        let imageModel = HomeImagePhotos(dictData: dictPhoto)
+                        self.presenter?.imageFetchedSuccess(imageModel: imageModel)
                     }
                 }catch{
                     print(error.localizedDescription)
