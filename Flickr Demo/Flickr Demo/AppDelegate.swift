@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        let homeVC = HomeViewRouter.createModule()
+        let homeVC = HomeViewRouter.createHomeModule()
 
         let navigationController = UINavigationController()
         navigationController.viewControllers = [homeVC]
