@@ -8,11 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		AE48D46E2583768200849002 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE48D46D2583768200849002 /* AppDelegate.swift */; };
-		AE48D4722583768200849002 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE48D4712583768200849002 /* ViewController.swift */; };
+		AE48D4722583768200849002 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE48D4712583768200849002 /* HomeViewController.swift */; };
 		AE48D4752583768200849002 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE48D4732583768200849002 /* Main.storyboard */; };
 		AE48D4772583768400849002 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE48D4762583768400849002 /* Assets.xcassets */; };
 		AE48D47A2583768400849002 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE48D4782583768400849002 /* LaunchScreen.storyboard */; };
 		AE48D4852583768400849002 /* Flickr_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE48D4842583768400849002 /* Flickr_DemoTests.swift */; };
+		AE48D49525837A3F00849002 /* HomeViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE48D49425837A3F00849002 /* HomeViewRouter.swift */; };
+		AE48D49825837AAE00849002 /* HomeViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE48D49725837AAE00849002 /* HomeViewProtocol.swift */; };
+		AE48D49A25837ADF00849002 /* HomeImagesDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE48D49925837ADF00849002 /* HomeImagesDataModel.swift */; };
+		AE48D49C25837B3500849002 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE48D49B25837B3500849002 /* HomeInteractor.swift */; };
+		AE48D49E25837B5A00849002 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE48D49D25837B5A00849002 /* HomePresenter.swift */; };
+		AE48D4A12583855D00849002 /* HomeImagesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE48D49F2583855D00849002 /* HomeImagesCollectionViewCell.swift */; };
+		AE48D4A22583855D00849002 /* HomeImagesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE48D4A02583855D00849002 /* HomeImagesCollectionViewCell.xib */; };
+		B8828A382B723FF8FE3397DD /* Pods_Flickr_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11FB2975FCAAECE1CCCDED04 /* Pods_Flickr_Demo.framework */; };
+		DF6896672DAE0C0F618EB5F3 /* Pods_Flickr_DemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A5F9A4EE5DE1F23C2C702D9 /* Pods_Flickr_DemoTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,9 +35,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		11FB2975FCAAECE1CCCDED04 /* Pods_Flickr_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flickr_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A5F9A4EE5DE1F23C2C702D9 /* Pods_Flickr_DemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flickr_DemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E45A97B9EA505D91DE568AB /* Pods-Flickr DemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flickr DemoTests.debug.xcconfig"; path = "Target Support Files/Pods-Flickr DemoTests/Pods-Flickr DemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		48282C273A5A610E0D9CC6B9 /* Pods-Flickr Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flickr Demo.release.xcconfig"; path = "Target Support Files/Pods-Flickr Demo/Pods-Flickr Demo.release.xcconfig"; sourceTree = "<group>"; };
+		A2BDB9D13003257D8286DAA2 /* Pods-Flickr Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flickr Demo.debug.xcconfig"; path = "Target Support Files/Pods-Flickr Demo/Pods-Flickr Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		AE48D46A2583768200849002 /* Flickr Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flickr Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE48D46D2583768200849002 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AE48D4712583768200849002 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AE48D4712583768200849002 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		AE48D4742583768200849002 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AE48D4762583768400849002 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE48D4792583768400849002 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +50,14 @@
 		AE48D4802583768400849002 /* Flickr DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Flickr DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE48D4842583768400849002 /* Flickr_DemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flickr_DemoTests.swift; sourceTree = "<group>"; };
 		AE48D4862583768400849002 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE48D49425837A3F00849002 /* HomeViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewRouter.swift; sourceTree = "<group>"; };
+		AE48D49725837AAE00849002 /* HomeViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewProtocol.swift; sourceTree = "<group>"; };
+		AE48D49925837ADF00849002 /* HomeImagesDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeImagesDataModel.swift; sourceTree = "<group>"; };
+		AE48D49B25837B3500849002 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		AE48D49D25837B5A00849002 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		AE48D49F2583855D00849002 /* HomeImagesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeImagesCollectionViewCell.swift; sourceTree = "<group>"; };
+		AE48D4A02583855D00849002 /* HomeImagesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeImagesCollectionViewCell.xib; sourceTree = "<group>"; };
+		D27EA391B841286C8B30D9CF /* Pods-Flickr DemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flickr DemoTests.release.xcconfig"; path = "Target Support Files/Pods-Flickr DemoTests/Pods-Flickr DemoTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8828A382B723FF8FE3397DD /* Pods_Flickr_Demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF6896672DAE0C0F618EB5F3 /* Pods_Flickr_DemoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +86,8 @@
 				AE48D46C2583768200849002 /* Flickr Demo */,
 				AE48D4832583768400849002 /* Flickr DemoTests */,
 				AE48D46B2583768200849002 /* Products */,
+				F8A3667A04503308C93B63B5 /* Pods */,
+				E8DD4F397B706ACDA21CF2C1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,7 +104,12 @@
 			isa = PBXGroup;
 			children = (
 				AE48D46D2583768200849002 /* AppDelegate.swift */,
-				AE48D4712583768200849002 /* ViewController.swift */,
+				AE48D49625837A7600849002 /* Protocols */,
+				AE48D492258379C700849002 /* View */,
+				AE48D490258379C200849002 /* Interactor */,
+				AE48D491258379C500849002 /* Presenter */,
+				AE48D493258379CA00849002 /* Entity */,
+				AE48D48F258379BC00849002 /* Router */,
 				AE48D4732583768200849002 /* Main.storyboard */,
 				AE48D4762583768400849002 /* Assets.xcassets */,
 				AE48D4782583768400849002 /* LaunchScreen.storyboard */,
@@ -96,6 +127,77 @@
 			path = "Flickr DemoTests";
 			sourceTree = "<group>";
 		};
+		AE48D48F258379BC00849002 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				AE48D49425837A3F00849002 /* HomeViewRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		AE48D490258379C200849002 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				AE48D49B25837B3500849002 /* HomeInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		AE48D491258379C500849002 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				AE48D49D25837B5A00849002 /* HomePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		AE48D492258379C700849002 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AE48D4712583768200849002 /* HomeViewController.swift */,
+				AE48D49F2583855D00849002 /* HomeImagesCollectionViewCell.swift */,
+				AE48D4A02583855D00849002 /* HomeImagesCollectionViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AE48D493258379CA00849002 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				AE48D49925837ADF00849002 /* HomeImagesDataModel.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		AE48D49625837A7600849002 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				AE48D49725837AAE00849002 /* HomeViewProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		E8DD4F397B706ACDA21CF2C1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				11FB2975FCAAECE1CCCDED04 /* Pods_Flickr_Demo.framework */,
+				2A5F9A4EE5DE1F23C2C702D9 /* Pods_Flickr_DemoTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F8A3667A04503308C93B63B5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A2BDB9D13003257D8286DAA2 /* Pods-Flickr Demo.debug.xcconfig */,
+				48282C273A5A610E0D9CC6B9 /* Pods-Flickr Demo.release.xcconfig */,
+				3E45A97B9EA505D91DE568AB /* Pods-Flickr DemoTests.debug.xcconfig */,
+				D27EA391B841286C8B30D9CF /* Pods-Flickr DemoTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +205,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AE48D4892583768400849002 /* Build configuration list for PBXNativeTarget "Flickr Demo" */;
 			buildPhases = (
+				5773E367A4C67A72177E506B /* [CP] Check Pods Manifest.lock */,
 				AE48D4662583768200849002 /* Sources */,
 				AE48D4672583768200849002 /* Frameworks */,
 				AE48D4682583768200849002 /* Resources */,
+				1D7CD0D8E8D3AE19F9746FB0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -120,6 +224,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AE48D48C2583768400849002 /* Build configuration list for PBXNativeTarget "Flickr DemoTests" */;
 			buildPhases = (
+				B0D04E3EB30B3E19EFF38202 /* [CP] Check Pods Manifest.lock */,
 				AE48D47C2583768400849002 /* Sources */,
 				AE48D47D2583768400849002 /* Frameworks */,
 				AE48D47E2583768400849002 /* Resources */,
@@ -179,6 +284,7 @@
 			files = (
 				AE48D47A2583768400849002 /* LaunchScreen.storyboard in Resources */,
 				AE48D4772583768400849002 /* Assets.xcassets in Resources */,
+				AE48D4A22583855D00849002 /* HomeImagesCollectionViewCell.xib in Resources */,
 				AE48D4752583768200849002 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -192,13 +298,83 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1D7CD0D8E8D3AE19F9746FB0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Flickr Demo/Pods-Flickr Demo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Flickr Demo/Pods-Flickr Demo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Flickr Demo/Pods-Flickr Demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5773E367A4C67A72177E506B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Flickr Demo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B0D04E3EB30B3E19EFF38202 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Flickr DemoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AE48D4662583768200849002 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE48D4722583768200849002 /* ViewController.swift in Sources */,
+				AE48D49E25837B5A00849002 /* HomePresenter.swift in Sources */,
+				AE48D4722583768200849002 /* HomeViewController.swift in Sources */,
+				AE48D49A25837ADF00849002 /* HomeImagesDataModel.swift in Sources */,
 				AE48D46E2583768200849002 /* AppDelegate.swift in Sources */,
+				AE48D49C25837B3500849002 /* HomeInteractor.swift in Sources */,
+				AE48D49525837A3F00849002 /* HomeViewRouter.swift in Sources */,
+				AE48D49825837AAE00849002 /* HomeViewProtocol.swift in Sources */,
+				AE48D4A12583855D00849002 /* HomeImagesCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +532,7 @@
 		};
 		AE48D48A2583768400849002 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2BDB9D13003257D8286DAA2 /* Pods-Flickr Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -374,6 +551,7 @@
 		};
 		AE48D48B2583768400849002 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48282C273A5A610E0D9CC6B9 /* Pods-Flickr Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -392,6 +570,7 @@
 		};
 		AE48D48D2583768400849002 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E45A97B9EA505D91DE568AB /* Pods-Flickr DemoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -413,6 +592,7 @@
 		};
 		AE48D48E2583768400849002 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D27EA391B841286C8B30D9CF /* Pods-Flickr DemoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
