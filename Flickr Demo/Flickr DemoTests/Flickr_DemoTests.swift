@@ -22,8 +22,41 @@ class Flickr_DemoTests: XCTestCase {
     func testExample() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+//        checkisDataAvailable()
+        checkisMoreDataAvailable()
     }
-
+    
+    func checkisDataAvailable() {
+        let dict : [String : Any] = ["page": 1, "pages": 2, "perpage": 10, "total": 4,
+                    "photo":[]]
+        let model = HomeImagePhotos(dictData: dict)
+        
+        // Given: Here we assert that our initial state is correct
+        XCTAssertLessThan(model.arrPhotos.count, model.total, "Download image from Server")
+        
+        // When
+        model.arrPhotos = [HomeImagesDataModel(dictData: [:]),HomeImagesDataModel(dictData: [:]),HomeImagesDataModel(dictData: [:]),HomeImagesDataModel(dictData: [:])]
+        
+        // Then
+        XCTAssertLessThan(model.arrPhotos.count, model.total, "Download image from Server")
+    }
+    
+    func checkisMoreDataAvailable() {
+        let dict : [String : Any] = ["page": 4, "pages": 2, "perpage": 10, "total": 4,
+                    "photo":[]]
+        let model = HomeImagePhotos(dictData: dict)
+        
+        // Given: Here we assert that our initial state is correct
+        XCTAssertEqual(model.page, model.page)
+        
+        // When
+        model.pages = 2
+        
+        // Then
+        XCTAssertEqual(model.page, model.page)
+    }
+    
+    
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
         self.measure {
