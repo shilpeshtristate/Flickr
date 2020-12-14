@@ -22,7 +22,7 @@ class Flickr_DemoTests: XCTestCase {
     func testExample() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-//        checkisDataAvailable()
+       //checkisDataAvailable()
         checkisMoreDataAvailable()
     }
     
@@ -32,12 +32,14 @@ class Flickr_DemoTests: XCTestCase {
         let model = HomeImagePhotos(dictData: dict)
         
         // Given: Here we assert that our initial state is correct
+        //successs case
         XCTAssertLessThan(model.arrPhotos.count, model.total, "Download image from Server")
         
         // When
-        model.arrPhotos = [HomeImagesDataModel(dictData: [:]),HomeImagesDataModel(dictData: [:]),HomeImagesDataModel(dictData: [:]),HomeImagesDataModel(dictData: [:])]
+       model.arrPhotos = [HomeImagesDataModel(dictData: [:]),HomeImagesDataModel(dictData: [:]),HomeImagesDataModel(dictData: [:]),HomeImagesDataModel(dictData: [:])]
         
-        // Then
+         //Then
+        //Fail case
         XCTAssertLessThan(model.arrPhotos.count, model.total, "Download image from Server")
     }
     
@@ -47,13 +49,15 @@ class Flickr_DemoTests: XCTestCase {
         let model = HomeImagePhotos(dictData: dict)
         
         // Given: Here we assert that our initial state is correct
-        XCTAssertEqual(model.page, model.page)
-        
+       // Fail case
+        XCTAssertEqual(Int(model.page), model.pages)
+                
         // When
-        model.pages = 2
-        
+        model.pages = 0
+                
         // Then
-        XCTAssertEqual(model.page, model.page)
+        //Success case
+        XCTAssertEqual(Int(model.page), model.pages)
     }
     
     

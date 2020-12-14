@@ -17,7 +17,7 @@ class HomeInteractor: PresenterToInteractorProtocol{
         let api_key = "d14c14722aecbb1783190a9ba52efa90"
         let gallery_id = "9634-72157621980433950"//"66911286-72157647277042064"
         let page     = "\(pageNumber)"
-        let per_page = "11"
+        let per_page = "8"
         
         
         let strURL = "https://www.flickr.com/services/rest/?method=\(method)&api_key=\(api_key)&gallery_id=\(gallery_id)&per_page=\(per_page)&page=\(page)&format=json&nojsoncallback=1"
