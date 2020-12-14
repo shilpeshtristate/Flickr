@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import StagLayout
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var cvCollection : UICollectionView!
@@ -20,6 +20,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Flickr Demo"
+        cvCollection.collectionViewLayout = StagLayout(widthHeightRatios: [(1.0, 1.0), (0.5, 0.5), (0.5, 1.5), (0.5, 1.0)], itemSpacing: 4)
         cvCollection.register(UINib(nibName: "HomeImagesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "HomeImagesCollectionViewCell")
         homePresenter?.startFetchingPhotos(pageNumber: page_no)
     }

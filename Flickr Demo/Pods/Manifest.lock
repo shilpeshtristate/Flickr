@@ -2,17 +2,21 @@ PODS:
   - SDWebImage (5.8.3):
     - SDWebImage/Core (= 5.8.3)
   - SDWebImage/Core (5.8.3)
+  - StagLayout (1.0.4)
 
 DEPENDENCIES:
   - SDWebImage (~> 5.0)
+  - StagLayout
 
 SPEC REPOS:
   trunk:
     - SDWebImage
+    - StagLayout
 
 SPEC CHECKSUMS:
   SDWebImage: 112503ec94a5a2a41869503844a15e8d8f1ead5c
+  StagLayout: 5ff3c358b506adb0315e25823006ec546fdbf519
 
-PODFILE CHECKSUM: fbe9b73ffec6b18bb670a31e3b641245fbefec07
+PODFILE CHECKSUM: 6eada0cc40d886858413e0c70b90933dcbcb7173
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.3

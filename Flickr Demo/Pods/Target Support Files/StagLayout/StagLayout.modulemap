@@ -1,0 +1,6 @@
+framework module StagLayout {
+  umbrella header "StagLayout-umbrella.h"
+
+  export *
+  module * { export * }
+}
