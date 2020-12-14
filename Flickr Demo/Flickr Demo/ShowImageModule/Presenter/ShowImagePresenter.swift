@@ -15,14 +15,6 @@ class ShowImagePresenter : ImageViewToPresenterProtocol {
     var interactor: ImagePresenterToInteractorProtocol?
     
     var router: ImagePresenterToRouterProtocol?
-    
-    func startFetchingPhotos() {
-        
-    }
-    
-    func showImageController(navigationController: UINavigationController) {
-        
-    }
 }
 
 extension ShowImagePresenter: ImageInteractorToPresenterProtocol{

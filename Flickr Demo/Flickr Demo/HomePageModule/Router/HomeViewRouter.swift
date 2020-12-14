@@ -11,7 +11,6 @@ import UIKit
 
 class HomeViewRouter:PresenterToRouterProtocol{
     static func createHomeModule() -> HomeViewController {
-        
         let view = mainstoryboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
         
         let presenter: ViewToPresenterProtocol & InteractorToPresenterProtocol = HomePresenter()
@@ -25,7 +24,6 @@ class HomeViewRouter:PresenterToRouterProtocol{
         interactor.presenter = presenter
         
         return view
-        
     }
     
     static var mainstoryboard: UIStoryboard{
@@ -33,7 +31,6 @@ class HomeViewRouter:PresenterToRouterProtocol{
     }
     
     func pushToImageScreen(navigationConroller navigationController:UINavigationController , image: UIImage) {
-        
         let showImageModule = ShowImageRouter.createImageModule()
         showImageModule.image = image
         navigationController.pushViewController(showImageModule,animated: true)

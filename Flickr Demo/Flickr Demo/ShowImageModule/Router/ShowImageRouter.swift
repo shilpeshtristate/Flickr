@@ -29,5 +29,4 @@ class ShowImageRouter:ImagePresenterToRouterProtocol{
     static var mainstoryboard: UIStoryboard{
         return UIStoryboard(name:"Main",bundle: Bundle.main)
     }
-    
 }

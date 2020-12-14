@@ -10,8 +10,4 @@ import Foundation
 
 class ShowImageInteractor : ImagePresenterToInteractorProtocol  {
     var presenter: ImageInteractorToPresenterProtocol?
-    
-    func fetchPhotos() {
-        
-    }
 }

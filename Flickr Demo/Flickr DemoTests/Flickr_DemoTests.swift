@@ -22,8 +22,8 @@ class Flickr_DemoTests: XCTestCase {
     func testExample() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-       //checkisDataAvailable()
-        checkisMoreDataAvailable()
+        checkisDataAvailable()
+//        checkisMoreDataAvailable()//This test it also testable.
     }
     
     func checkisDataAvailable() {

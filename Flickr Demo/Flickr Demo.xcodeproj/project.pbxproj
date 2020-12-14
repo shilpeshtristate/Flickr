@@ -201,7 +201,6 @@
 			children = (
 				AEB7B9192583A27C00A8FDE1 /* Protocols */,
 				AEB7B9122583A17700A8FDE1 /* Router */,
-				AEB7B9112583A16E00A8FDE1 /* Entity */,
 				AEB7B9102583A16600A8FDE1 /* Presenter */,
 				AEB7B90F2583A15E00A8FDE1 /* Interactor */,
 				AEB7B90E2583A15600A8FDE1 /* View */,
@@ -231,13 +230,6 @@
 				AEB7B9152583A1AC00A8FDE1 /* ShowImagePresenter.swift */,
 			);
 			path = Presenter;
-			sourceTree = "<group>";
-		};
-		AEB7B9112583A16E00A8FDE1 /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Entity;
 			sourceTree = "<group>";
 		};
 		AEB7B9122583A17700A8FDE1 /* Router */ = {

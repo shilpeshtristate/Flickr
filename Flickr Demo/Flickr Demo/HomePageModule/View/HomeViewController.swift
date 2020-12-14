@@ -10,7 +10,7 @@ import UIKit
 import StagLayout
 class HomeViewController: UIViewController {
 
-    @IBOutlet weak var cvCollection : UICollectionView!
+    @IBOutlet weak var collectionImages : UICollectionView!
     
     var homePresenter:HomePresenter?
     var model : HomeImagePhotos = HomeImagePhotos()
@@ -20,8 +20,8 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Flickr Demo"
-        cvCollection.collectionViewLayout = StagLayout(widthHeightRatios: [(1.0, 1.0), (0.5, 0.5), (0.5, 1.5), (0.5, 1.0)], itemSpacing: 4)
-        cvCollection.register(UINib(nibName: "HomeImagesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "HomeImagesCollectionViewCell")
+        collectionImages.collectionViewLayout = StagLayout(widthHeightRatios: [(1.0, 1.0), (0.5, 0.5), (0.5, 1.5), (0.5, 1.0)], itemSpacing: 4)
+        collectionImages.register(UINib(nibName: "HomeImagesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "HomeImagesCollectionViewCell")
         homePresenter?.startFetchingPhotos(pageNumber: page_no)
     }
 }
@@ -39,7 +39,7 @@ extension HomeViewController : UICollectionViewDelegate,UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let cell = cvCollection.cellForItem(at: indexPath) as? HomeImagesCollectionViewCell, let image = cell.imgView.image {
+        if let cell = collectionImages.cellForItem(at: indexPath) as? HomeImagesCollectionViewCell, let image = cell.imgView.image {
             homePresenter?.showImageController(navigationController: navigationController ?? UINavigationController(), image: image)
         }
     }
@@ -85,12 +85,16 @@ extension HomeViewController : PresenterToViewProtocol {
         model.arrPhotos = arrImages
         
         DispatchQueue.main.async {
-            self.cvCollection.collectionViewLayout.invalidateLayout()
-            self.cvCollection.reloadData()
+            self.collectionImages.collectionViewLayout.invalidateLayout()
+            self.collectionImages.reloadData()
         }
     }
     
     func showError() {
-        
+        let alert = UIAlertController(title: "Flickr Demo", message: "Not able to download data.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (okAction) in
+            
+        }))
+        present(self, animated: true, completion: nil)        
     }
 }

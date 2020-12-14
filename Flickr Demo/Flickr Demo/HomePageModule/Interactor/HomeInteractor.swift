@@ -22,7 +22,6 @@ class HomeInteractor: PresenterToInteractorProtocol{
         
         let strURL = "https://www.flickr.com/services/rest/?method=\(method)&api_key=\(api_key)&gallery_id=\(gallery_id)&per_page=\(per_page)&page=\(page)&format=json&nojsoncallback=1"
         
-        
 
         var request = URLRequest(url: URL(string: strURL)!)
         request.httpMethod = "GET"

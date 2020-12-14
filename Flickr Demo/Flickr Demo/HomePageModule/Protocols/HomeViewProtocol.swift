@@ -10,13 +10,11 @@ import Foundation
 import UIKit
 
 protocol ViewToPresenterProtocol: class{
-    
     var view: PresenterToViewProtocol? {get set}
     var interactor: PresenterToInteractorProtocol? {get set}
     var router: PresenterToRouterProtocol? {get set}
     func startFetchingPhotos(pageNumber: Int)
     func showImageController(navigationController:UINavigationController,image:UIImage)
-
 }
 
 protocol PresenterToViewProtocol: class{

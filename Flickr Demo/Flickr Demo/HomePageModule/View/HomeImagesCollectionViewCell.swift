@@ -19,6 +19,6 @@ class HomeImagesCollectionViewCell: UICollectionViewCell {
 
     
     func cellConfig(model : HomeImagesDataModel) {
-        imgView.sd_setImage(with: URL(string: model.imageURL), placeholderImage: UIImage(named: "placeholder.png"))
+        imgView.sd_setImage(with: URL(string: model.imageURL), placeholderImage: nil)
     }
 }
